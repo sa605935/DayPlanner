@@ -23,3 +23,9 @@ hoursArray.forEach(function(hour) {
     rowDiv.append(timeCol, textCol, btnCol);
     $('.container').append(rowDiv);
 })
+
+//Saves tasks to local storage
+function saveDescription () {
+    var time = $(this).parent().attr('id');
+    var descriptionText = $(this).siblings('.description').val();
+    localStorage.setItem(time, descriptionText);
