@@ -1,5 +1,5 @@
 var currentHour = moment().hours();
-var hoursArray = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var hoursArray = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
 
 $('#currentDay').text(moment().format('dddd, MMMM Do YYYY, h:mm a'));
 
@@ -50,14 +50,14 @@ $('.clearBtn').click(function(){
 //This connects the CSS styling to the code so that the color of the hour row changes depending if the hour is in the past, present or future
 $('.time-block').each(function(){
     var hourBlock = parseInt($(this).attr('id'));
-    if (hourBlock < currentHour) {
-        $(this).removeClass('future');
-        $(this).removeClass('present');
-        $(this).addClass('past');
-    } else if (hourBlock === currentHour) {
+    if (hourBlock === currentHour) {
         $(this).removeClass('future');
         $(this).removeClass('past');
         $(this).addClass('present');
+    } else if (hourBlock < currentHour) {
+        $(this).removeClass('future');
+        $(this).removeClass('present');
+        $(this).addClass('past');
     } else {
         $(this).removeClass('past');
         $(this).removeClass('present');
