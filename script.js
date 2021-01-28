@@ -46,3 +46,21 @@ $('.clearBtn').click(function(){
         $(`#${hour} .description`).val('');
     })
 })
+
+//This connects the CSS styling to the code so that the color of the hour row changes depending if the hour is in the past, present or future
+$('.time-block').each(function(){
+    var hourBlock = parseInt($(this).attr('id'));
+    if (hourBlock < currentHour) {
+        $(this).removeClass('future');
+        $(this).removeClass('present');
+        $(this).addClass('past');
+    } else if (hourBlock === currentHour) {
+        $(this).removeClass('future');
+        $(this).removeClass('past');
+        $(this).addClass('present');
+    } else {
+        $(this).removeClass('past');
+        $(this).removeClass('present');
+        $(this).addClass('future');
+    }
+})
