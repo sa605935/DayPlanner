@@ -35,3 +35,14 @@ function saveDescription () {
 hoursArray.forEach(function(hour) {
     $(`#${hour} .description`).val(localStorage.getItem(hour));
 })
+
+//This is the event for the save button 
+$('.saveBtn').click(saveDescription);
+
+//This is the event for the clear button
+$('.clearBtn').click(function(){
+    localStorage.clear();
+    hoursArray.forEach(function(hour) {
+        $(`#${hour} .description`).val('');
+    })
+})
