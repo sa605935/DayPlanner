@@ -12,13 +12,6 @@ body {
     border-left: 1px solid black;
     padding: 10px;
   }
-
-  .clearBtn {
-    border-radius: 15px;
-    background-color: #06AED5;
-    padding: 15px;
-    color: white;
-  }
   
   .container {
     padding-bottom: 150px;
@@ -38,7 +31,7 @@ body {
     height: 80px;
     border-top: 1px solid white;
   }
-  
+
   .saveBtn {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
@@ -51,4 +44,18 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
-  
+
+  .jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+  }
+
+  .clearBtn {
+    border-radius: 15px;
+    background-color: #06AED5;
+    padding: 15px;
+    color: white;
+  }
