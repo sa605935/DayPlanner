@@ -1,6 +1,8 @@
 # DayPlanner
 Unit 5 Homework Assignment: Day Planner
 
+https://sa605935.github.io/DayPlanner/
+
 Assignment
 We were instructed to design an interactive day planner. This website gives the user the opportunity to plan out a day from 9am to 10 pm. The site is fully functional and even allows the user to save the information locally. The website is also responsive and the color of the hour changes to reflect if the hour is in the past, present or future.
 
