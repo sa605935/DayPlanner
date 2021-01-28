@@ -1,5 +1,5 @@
 var currentHour = moment().hours();
-var hoursArray = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+var hoursArray = [9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 $('#currentDay').text(moment().format('dddd, MMMM Do YYYY, h:mm a'));
 
@@ -24,8 +24,14 @@ hoursArray.forEach(function(hour) {
     $('.container').append(rowDiv);
 })
 
-//Saves tasks to local storage
+//Saves tasks TO local storage
 function saveDescription () {
     var time = $(this).parent().attr('id');
     var descriptionText = $(this).siblings('.description').val();
     localStorage.setItem(time, descriptionText);
+}
+
+//Accesses tasks FROM local storage
+hoursArray.forEach(function(hour) {
+    $(`#${hour} .description`).val(localStorage.getItem(hour));
+})
